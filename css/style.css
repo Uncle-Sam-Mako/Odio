@@ -134,3 +134,10 @@ body.show_menu .menu {
 .menu .color3 .property-img {
     background: linear-gradient(270.21deg, #006736 5.49%, #00C2FF 99.83%);
 } 
+
+audio {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+}
