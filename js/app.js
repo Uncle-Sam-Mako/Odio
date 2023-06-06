@@ -34,9 +34,12 @@ AUDIOPLAYER.addEventListener('play', () => {
     let barHeight;
     let x;
 
+    
+    
+style="style2"
     function visualize() {
         requestAnimationFrame(visualize);
-
+        
         x = 0;
 
         audioAnalyser.getByteFrequencyData(arrayOfFrequencies);
@@ -44,18 +47,36 @@ AUDIOPLAYER.addEventListener('play', () => {
         ctx.fillStyle = "#111";
         ctx.fillRect(0, 0, WIDTH, HEIGHT);
 
-        for(let i = 0; i < audioFrequencies; i++) {
-            barHeight = arrayOfFrequencies[i];
-
-            const RED = 0;
-            const GREEN = 57 + i;
-            const BLUE = 103 + (i / 2);
-
-            ctx.fillStyle = `rgb(${RED}, ${GREEN}, ${BLUE})`;
-            ctx.fillRect(x, HEIGHT, barWidth, -barHeight);
-
-            x += barWidth + 1;
+        if(style === "style1"){
+            for(let i = 0; i < audioFrequencies; i++) {
+                barHeight = arrayOfFrequencies[i];
+    
+                const RED = 250;
+                const GREEN = 50 + i;
+                const BLUE = 10 + (i / 2);
+    
+                ctx.fillStyle = `rgb(${RED}, ${GREEN}, ${BLUE})`;
+                ctx.fillRect(x, HEIGHT, barWidth, -barHeight);
+    
+                x += barWidth + 1;
+            }
+        } else if(style === "style2") {
+            for(let i = 0; i < audioFrequencies; i++) {
+                barHeight = arrayOfFrequencies[i];
+    
+                const RED = 250;
+                const GREEN = 50;
+                const BLUE = i;
+    
+                ctx.beginPath()
+                ctx.fillStyle = `rgb(${RED}, ${GREEN}, ${BLUE})`;
+                ctx.arc(x, HEIGHT- barHeight, barWidth, 0, Math.PI * 2, false)
+                //ctx.fillRect(x, HEIGHT, barWidth, -barHeight);
+                ctx.fill()
+                x += barWidth + 1;
+            } 
         }
+        
 
     }
 
