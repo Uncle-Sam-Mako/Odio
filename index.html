@@ -9,110 +9,108 @@
 </head>
 <body>
     <div class="container">
-
         <div class="navbar">
             <div class="logo">
                 <img src="./img/odio.png" alt="odio_logo">
             </div>
-            <div class="menu-btn">
-                
+            <div class="menu-btn-container">
+                <button class="menu-btn" id="menu-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M190.5 66.9l22.2-22.2c9.4-9.4 24.6-9.4 33.9 0L441 239c9.4 9.4 9.4 24.6 0 33.9L246.6 467.3c-9.4 9.4-24.6 9.4-33.9 0l-22.2-22.2c-9.5-9.5-9.3-25 .4-34.3L311.4 296H24c-13.3 0-24-10.7-24-24v-32c0-13.3 10.7-24 24-24h287.4L190.9 101.2c-9.8-9.3-10-24.8-.4-34.3z"/></svg>
+                </button>
             </div>
         </div>
-
-        <div class="menu">
-            <div class="menu-item choose_style">
-                <h4 class="property-title">Choose style</h4>
-                <div class="property-list">
-                    <div class="property style1">
-                        <span class="property-input">
-                            <div class="property-img">
-                                <img src="./img/style1.svg" alt="" srcset="">
-                            </div>
-                            <input type="radio" name="style" id="style1" checked>
-                        </span>
-                        <label for="style1">Style 1</label>
-                    </div>
-                    <div class="property style2">
-                        <span class="property-input">
-                            <div class="property-img">
-                                <img src="./img/style2.svg" alt="" srcset="">
-                            </div>
-                            <input type="radio" name="style" id="style2" checked>
-                        </span>
-                        <label for="style2">Style 2</label>
-                    </div>
-                    <div class="property style3">
-                        <span class="property-input">
-                            <div class="property-img">
-                                <img src="./img/style3.svg" alt="" srcset="">
-                            </div>
-                            <input type="radio" name="style" id="style3" checked>
-                        </span>
-                        <label for="style3">Style 3</label>
-                    </div>
+    </div>
+    <div class="menu">
+        <div class="menu-item choose_style">
+            <h4 class="property-title">Choose style</h4>
+            <div class="property-list">
+                <div class="property style1">
+                    <span class="property-input">
+                        <div class="property-img">
+                            <img src="./img/style1.svg" alt="" srcset="">
+                        </div>
+                        <input type="radio" name="style" id="style1" checked>
+                    </span>
+                    <label for="style1">Style 1</label>
                 </div>
-            </div>
-            <div class="menu-item choose_color">
-                <h4 class="property-title">Choose color</h4>
-                <div class="property-list">
-                    <div class="property color1">
-                        <span class="property-input">
-                            <div class="property-img"></div>
-                            <input type="radio" name="color" id="color1" checked>
-                        </span>
-                        <label for="color1">Color 1</label>
-                    </div>
-                    <div class="property color2">
-                        <span class="property-input">
-                            <div class="property-img"></div>
-                            <input type="radio" name="color" id="color2" checked>
-                        </span>
-                        <label for="color2">Color 2</label>
-                    </div>
-                    <div class="property color3">
-                        <span class="property-input">
-                            <div class="property-img"></div>
-                            <input type="radio" name="color" id="color3" checked>
-                        </span>
-                        <label for="color3">Color 3</label>
-                    </div>
+                <div class="property style2">
+                    <span class="property-input">
+                        <div class="property-img">
+                            <img src="./img/style2.svg" alt="" srcset="">
+                        </div>
+                        <input type="radio" name="style" id="style2">
+                    </span>
+                    <label for="style2">Style 2</label>
                 </div>
-            </div>
-            <div class="menu-tem choose_song">
-                <h4 class="property-title">Choose song</h4>
-                <div class="property-list">
-                    <div class="property song">
-                        <span class="property-input">
-                            <div class="property-img">
-                                <img src="./img/song.svg" alt="">
-                            </div>
-                            <input type="radio" name="song" id="song1" checked>
-                        </span>
-                        <label for="song1">Song 1</label>
-                    </div>
-                    <div class="property song2">
-                        <span class="property-input">
-                            <div class="property-img">
-                                <img src="./img/song.svg" alt="">
-                            </div>
-                            <input type="radio" name="song" id="song2" checked>
-                        </span>
-                        <label for="song2">Song 2</label>
-                    </div>
-                    <div class="property song3">
-                        <span class="property-input">
-                            <div class="property-img">
-                                <img src="./img/song.svg" alt="">
-                            </div>
-                            <input type="radio" name="song" id="song3" checked>
-                        </span>
-                        <label for="song3">Song 3</label>
-                    </div>
+                <div class="property style3">
+                    <span class="property-input">
+                        <div class="property-img">
+                            <img src="./img/style3.svg" alt="" srcset="">
+                        </div>
+                        <input type="radio" name="style" id="style3">
+                    </span>
+                    <label for="style3">Style 3</label>
                 </div>
             </div>
         </div>
-        
-        
+        <div class="menu-item choose_color">
+            <h4 class="property-title">Choose color</h4>
+            <div class="property-list">
+                <div class="property color1">
+                    <span class="property-input">
+                        <div class="property-img"></div>
+                        <input type="radio" name="color" id="color1">
+                    </span>
+                    <label for="color1">Color 1</label>
+                </div>
+                <div class="property color2">
+                    <span class="property-input">
+                        <div class="property-img"></div>
+                        <input type="radio" name="color" id="color2">
+                    </span>
+                    <label for="color2">Color 2</label>
+                </div>
+                <div class="property color3">
+                    <span class="property-input">
+                        <div class="property-img"></div>
+                        <input type="radio" name="color" id="color3">
+                    </span>
+                    <label for="color3">Color 3</label>
+                </div>
+            </div>
+        </div>
+        <div class="menu-tem choose_song">
+            <h4 class="property-title">Choose song</h4>
+            <div class="property-list">
+                <div class="property song">
+                    <span class="property-input">
+                        <div class="property-img">
+                            <img src="./img/song.svg" alt="">
+                        </div>
+                        <input type="radio" name="song" id="song1">
+                    </span>
+                    <label for="song1">Song 1</label>
+                </div>
+                <div class="property song2">
+                    <span class="property-input">
+                        <div class="property-img">
+                            <img src="./img/song.svg" alt="">
+                        </div>
+                        <input type="radio" name="song" id="song2">
+                    </span>
+                    <label for="song2">Song 2</label>
+                </div>
+                <div class="property song3">
+                    <span class="property-input">
+                        <div class="property-img">
+                            <img src="./img/song.svg" alt="">
+                        </div>
+                        <input type="radio" name="song" id="song3">
+                    </span>
+                    <label for="song3">Song 3</label>
+                </div>
+            </div>
+        </div>
     </div>
     <canvas id="canvas"></canvas>
     <script src="./js/app.js"></script>

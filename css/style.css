@@ -16,10 +16,12 @@ body {
     margin: 0;
     padding: 0;
     height: 100vh;
-    background: url('/img/bg.jpg');
+    overflow: hidden;
+    background: #111;
     color: var(--text-color);
     font-family: 'Inter', sans-serif;
     font-size: .95em;
+    position: relative;
 }
 svg, img{
     width: 100%;
@@ -31,25 +33,53 @@ svg, img{
     position: relative;
 }
 .navbar {
+    height: 70px;
     padding: 25px;
+    display: flex;
+    justify-content: space-between;
+    z-index: 100;
 }
 .logo{
     width: 70px;
 }
+.menu-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    background: #333;
+    transition: transform .6s;
+    transform: rotate(180deg);
+}
+body.show_menu .menu-btn {
+    transform: rotate(0deg);
+}
+.menu-btn svg {
+    fill: #eee;
+    width: 20px;
+    vertical-align: middle;
+}
 .menu {
     position: absolute;
+    top: 80px;
     right: 0;
     background-color: rgba(51, 51, 51, 0.404);
     width: 400px;
-    height: 100%;
+    height: fit-content;
+    max-height: calc(100% - 80px);
     min-width: 300px;
+    overflow-y: auto;
     padding: 15px;
     border: 1px solid rgba(238, 238, 238, 0.267);
     border-radius: 15px;
     backdrop-filter: blur(5px);
     box-shadow: 0px 0px 20px rgba(51, 51, 51, 0.396);
-    
-    
+    z-index: 99;
+    transition: transform .6s;
+    transform: translateX(100%);
+}
+body.show_menu .menu {
+    transform: translateX(-10%);
 }
 .menu .menu-item{
     margin: 20px 5px;
