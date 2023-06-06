@@ -16,6 +16,7 @@ body {
     margin: 0;
     padding: 0;
     height: 100vh;
+    width: 100%;
     overflow: hidden;
     background: #111;
     color: var(--text-color);
@@ -139,5 +140,15 @@ audio {
     position: absolute;
     top: 40%;
     left: 50%;
-    transform: translate(-50%, -50%)
+    transform: translate(-50%, -50%);
 }
+
+#canvas {
+    position: absolute;
+    left: 0;
+    top : 0;
+    width: 100%;
+    height: 100%;
+    background-color: #111;
+    z-index: -1;
+ }
