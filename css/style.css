@@ -16,7 +16,7 @@ body {
     margin: 0;
     padding: 0;
     height: 100vh;
-    background: #111;
+    background: url('/img/bg.jpg');
     color: var(--text-color);
     font-family: 'Inter', sans-serif;
     font-size: .95em;
@@ -28,13 +28,27 @@ svg, img{
 .container {
     width: 100%;
     height: 100%;
+    position: relative;
+}
+.navbar {
+    padding: 25px;
+}
+.logo{
+    width: 70px;
 }
 .menu {
-    background-color: #333;
+    position: absolute;
+    right: 0;
+    background-color: rgba(51, 51, 51, 0.404);
     width: 400px;
     height: 100%;
     min-width: 300px;
     padding: 15px;
+    border: 1px solid rgba(238, 238, 238, 0.267);
+    border-radius: 15px;
+    backdrop-filter: blur(5px);
+    box-shadow: 0px 0px 20px rgba(51, 51, 51, 0.396);
+    
     
 }
 .menu .menu-item{
@@ -50,7 +64,7 @@ svg, img{
     flex-wrap: wrap;
 }
 .menu .property {
-    margin: 10px;
+    margin: 5px;
 }
 .menu .property-input{
     position: relative;
