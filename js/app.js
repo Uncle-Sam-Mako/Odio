@@ -33,10 +33,18 @@ AUDIOPLAYER.addEventListener('play', () => {
     const barWidth = (WIDTH / arrayOfFrequencies.length) + 2;
     let barHeight;
     let x;
+    let style = "style1";
+    
+    const inputsForStyle = document.querySelectorAll('input[name=style]');
+    inputsForStyle.forEach(input => {
+        input.addEventListener('change', () => {
+            style = document.querySelector('input[name=style]:checked').getAttribute('id');
+        })
+    }) 
+    
+    
 
-    
-    
-style="style2"
+
     function visualize() {
         requestAnimationFrame(visualize);
         
@@ -44,40 +52,36 @@ style="style2"
 
         audioAnalyser.getByteFrequencyData(arrayOfFrequencies);
 
+        ctx.clearRect(0, 0, WIDTH, HEIGHT);
         ctx.fillStyle = "#111";
         ctx.fillRect(0, 0, WIDTH, HEIGHT);
 
-        if(style === "style1"){
-            for(let i = 0; i < audioFrequencies; i++) {
-                barHeight = arrayOfFrequencies[i];
-    
-                const RED = 250;
-                const GREEN = 50 + i;
-                const BLUE = 10 + (i / 2);
-    
+        
+        for(let i = 0; i < audioFrequencies; i++) {
+            barHeight = arrayOfFrequencies[i];
+
+            const RED = 250;
+            const GREEN = 50;
+            const BLUE = i;
+            
+            if(style === "style1") {
                 ctx.fillStyle = `rgb(${RED}, ${GREEN}, ${BLUE})`;
                 ctx.fillRect(x, HEIGHT, barWidth, -barHeight);
-    
-                x += barWidth + 1;
             }
-        } else if(style === "style2") {
-            for(let i = 0; i < audioFrequencies; i++) {
-                barHeight = arrayOfFrequencies[i];
-    
-                const RED = 250;
-                const GREEN = 50;
-                const BLUE = i;
-    
+            else if(style === "style2") {
                 ctx.beginPath()
                 ctx.fillStyle = `rgb(${RED}, ${GREEN}, ${BLUE})`;
                 ctx.arc(x, HEIGHT- barHeight, barWidth, 0, Math.PI * 2, false)
-                //ctx.fillRect(x, HEIGHT, barWidth, -barHeight);
                 ctx.fill()
-                x += barWidth + 1;
-            } 
-        }
-        
+            }
+            else if(style === "style3") {
+                ctx.fillStyle = `rgb(${RED}, ${GREEN}, ${BLUE})`;
+                ctx.fillRect(x, HEIGHT-barHeight, barWidth, 5);
+            }
 
+            x += barWidth + 1;
+        } 
+        
     }
 
     visualize()
