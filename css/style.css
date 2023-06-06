@@ -127,7 +127,7 @@ body.show_menu .menu {
 }
 
 .menu .color1 .property-img {
-    background: linear-gradient(270.21deg, #003967 5.49%, #008CFF 99.83%);
+    background: linear-gradient(270.21deg, rgb(0, 80, 148) 5.49%, rgb(0, 150, 255) 99.83%);
 } 
 .menu .color2 .property-img {
     background: linear-gradient(270.21deg, #670000 5.49%, #FF007A 99.83%);

@@ -47,9 +47,9 @@ AUDIOPLAYER.addEventListener('play', () => {
         for(let i = 0; i < audioFrequencies; i++) {
             barHeight = arrayOfFrequencies[i];
 
-            const RED = 250;
-            const GREEN = 50;
-            const BLUE = i;
+            const RED = 0;
+            const GREEN = 57 + i;
+            const BLUE = 103 + (i / 2);
 
             ctx.fillStyle = `rgb(${RED}, ${GREEN}, ${BLUE})`;
             ctx.fillRect(x, HEIGHT, barWidth, -barHeight);
@@ -61,4 +61,20 @@ AUDIOPLAYER.addEventListener('play', () => {
 
     visualize()
 
+
 })
+
+const songInputs = document.querySelectorAll('input[name=sound]');
+
+songInputs.forEach(input => {
+    input.addEventListener('change', (e) => {
+        selectSong(e)
+        console.log(AUDIOPLAYER.getAttribute('src'))
+    })
+})
+
+function selectSong(e) {
+    AUDIOPLAYER.pause()
+    AUDIOPLAYER.src = `./sounds/${e.target.getAttribute('id')}.mp3`
+    AUDIOPLAYER.play();
+}
