@@ -89,6 +89,7 @@ body.show_menu .menu {
     text-transform: uppercase;
     border-bottom: 1px solid var(--text-color);
     font-size: small;
+    font-weight: bolder;
 }
 .menu .property-list {
     display: flex;
@@ -96,6 +97,9 @@ body.show_menu .menu {
 }
 .menu .property {
     margin: 5px;
+}
+.menu .property label {
+    font-size: small;
 }
 .menu .property-input{
     position: relative;
