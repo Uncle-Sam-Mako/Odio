@@ -33,8 +33,9 @@ AUDIOPLAYER.addEventListener('play', () => {
     const barWidth = (WIDTH / arrayOfFrequencies.length) + 2;
     let barHeight;
     let x;
-    let style = "style1";
-    
+
+    //Selection of style
+    let style = "style1"; // style1 by default
     const inputsForStyle = document.querySelectorAll('input[name=style]');
     inputsForStyle.forEach(input => {
         input.addEventListener('change', () => {
@@ -42,6 +43,15 @@ AUDIOPLAYER.addEventListener('play', () => {
         })
     }) 
     
+    //Selection of color
+    let colorRGB = [0,89,200]; // style1 by default
+    const inputsForColor = document.querySelectorAll('input[name=color]');
+    inputsForColor.forEach(input => {
+        input.addEventListener('change', () => {
+            let colorValue = document.querySelector('input[name=color]:checked').getAttribute('data-rgb');
+            colorRGB = colorValue.split(';');
+        })
+    }) 
     
 
 
@@ -60,9 +70,9 @@ AUDIOPLAYER.addEventListener('play', () => {
         for(let i = 0; i < audioFrequencies; i++) {
             barHeight = arrayOfFrequencies[i];
 
-            const RED = 250;
-            const GREEN = 50;
-            const BLUE = i;
+            const RED = colorRGB[0] + i;
+            const GREEN = colorRGB[1];
+            const BLUE = colorRGB[2] + (i/2);
             
             if(style === "style1") {
                 ctx.fillStyle = `rgb(${RED}, ${GREEN}, ${BLUE})`;

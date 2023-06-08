@@ -131,13 +131,13 @@ body.show_menu .menu {
 }
 
 .menu .color1 .property-img {
-    background: linear-gradient(270.21deg, rgb(0, 80, 148) 5.49%, rgb(0, 150, 255) 99.83%);
+    background: linear-gradient(to right, rgb(0, 89, 255), rgb(200, 89, 255));
 } 
 .menu .color2 .property-img {
-    background: linear-gradient(270.21deg, #670000 5.49%, #FF007A 99.83%);
+    background: linear-gradient(to right, rgb(0, 255, 149), rgb(100, 255, 200));
 } 
 .menu .color3 .property-img {
-    background: linear-gradient(270.21deg, #006736 5.49%, #00C2FF 99.83%);
+    background: linear-gradient(to right, rgb(255, 150, 0), rgb(255, 150, 80));
 } 
 
 audio {
@@ -155,4 +155,7 @@ audio {
     height: 100%;
     background-color: #111;
     z-index: -1;
+ }
+
+.h{ color : rgb(0, 89, 255);
  }
