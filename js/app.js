@@ -53,10 +53,10 @@ AUDIOPLAYER.addEventListener('play', () => {
         })
     }) 
     
-
+    let reqAnim;
 
     function visualize() {
-        requestAnimationFrame(visualize);
+        reqAnim = window.requestAnimationFrame(visualize);
         
         x = 0;
 
@@ -96,8 +96,8 @@ AUDIOPLAYER.addEventListener('play', () => {
 
     visualize()
 
-
 })
+
 
 const songInputs = document.querySelectorAll('input[name=sound]');
 
