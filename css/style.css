@@ -3,7 +3,7 @@
 
 
 :root {
-    --text-color : #9c9c9c;
+    --text-color : #b9b9b9;
 }
 * {
     box-sizing: border-box;
@@ -87,6 +87,7 @@ body.show_menu .menu {
 }
 .menu .property-title {
     text-transform: uppercase;
+    color: #fff;
     border-bottom: 1px solid var(--text-color);
     font-size: small;
     font-weight: bolder;
